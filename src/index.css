@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --color-dark-blue-bg: #59c0ec;
+  --color-light-skyblue-bg: #b4d4ff;
+  --color-light-blue: #eef5ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+  align-items: center;
+  justify-content: center;
+  background: url("images/bgImg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: Merriweather;
+}
+
+.loader {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 4.8rem;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  padding: 4.8rem;
+}
+
+.flip_card,
+.flip_card_active {
+  width: 300px;
+  height: max-content;
+  position: relative;
+  padding: 20px;
+  border-radius: 7px;
+  text-align: center;
+  transition: transform 0.55s;
+  transform-style: preserve-3d;
+  background-color: var(--color-dark-blue-bg);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.flip_card_active {
+  transform: rotateY(180deg);
+}
+
+.flip_card_front,
+.flip_card_back {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+}
+
+.flip_card_back {
+  transform: rotateY(180deg);
+}
+
+.flip_card h2 {
+  text-transform: uppercase;
+  font-family: Exo;
+  font-weight: 500;
+}
+
+.top_content span {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif,
+    "Times New Roman", Times, serif;
+}
+
+.top_content span img {
+  width: 10%;
+  height: 15%;
+}
+
+.middle_content img {
+  border: none;
+  width: 40%;
+  height: 40%;
+  margin-left: 10px;
+}
+
+.base_content {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0.5rem;
+  font-size: 68%;
+  font-weight: 600;
+  text-align: center;
+  align-items: center;
+}
+
+.base_content p {
+  display: inline-block;
+}
+
+.grid_data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.grid_data p {
+  font-size: 14px;
+}
+
+.grid_data img {
+  width: 25%;
+  height: 25%;
+}
+
+.btn {
+  margin: 2px 0px;
+  border-radius: 6px;
+  background-color: var(--color-light-blue);
+  border: none;
+  height: 30px;
+  cursor: pointer;
+  padding: 0px 10px;
+  width: 100%;
+}
+
+.back_container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem 0rem;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.reset_btn {
+  border-radius: 100%;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  width: 35px;
+  height: 30px;
+  left: 0;
+  top: 0;
+}
+
+.reset_btn:hover {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+/* 
+.otherdays_btn {
+  border-radius: 5px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.3);
+  height: 30px;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 100%;
+  margin: 1rem 0rem;
+} */
+
+.btn:hover {
+  background-color: #e4eaf1;
+}
+
+/* .otherdays_btn:hover {
+  background-color: rgba(89, 192, 236, 0.295);
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.3);
+} */
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.search-box {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  position: relative;
+  padding: 9px;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+.search-box:focus {
+  border: 0.7px solid #a3ceb2;
+}
+
+.search-form button[type="submit"] {
+  background-color: #4e99e9;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 9.5px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.9s ease;
+}
+
+.search-form button[type="submit"]:hover {
+  color: rgb(255, 255, 255);
+  transform: scale(1.025);
+}

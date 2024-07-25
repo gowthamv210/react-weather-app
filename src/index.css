@@ -21,7 +21,7 @@ body {
   line-height: 2rem;
   align-items: center;
   justify-content: center;
-  background: url("images/bgImg.jpeg");
+  background: url("/images/bgImg.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
